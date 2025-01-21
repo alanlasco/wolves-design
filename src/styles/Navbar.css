@@ -1,0 +1,30 @@
+.linkN {
+    padding-top: 0.1rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 15px;
+    color: #171617;
+}
+
+.linkN:hover {
+    background-color: #171617;
+    color: aliceblue;
+
+    /* border-bottom: 3px solid #171617 */
+}
+
+.DotDagerNav {
+    margin-left: 1.5rem;
+
+    font-size: 2rem;
+    font-family: 'Noto Serif';
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Ajusta los valores según lo necesites */
+
+}
+
+.flecha {
+    color: #8d1f7b;
+}
