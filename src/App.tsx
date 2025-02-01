@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
 import { Navbar } from "./components/Navbar.tsx";
+import { Home } from "./components/Home.tsx";
 
 export function App() {
   return (
     <div className="App">
       <Navbar />
-      <h1>prueba</h1>
+      <Home />
     </div>
   );
 }

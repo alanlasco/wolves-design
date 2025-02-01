@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
 .linkN {
+    font-family: 'Montserrat';
+    font-weight: 400;
     padding-top: 0.1rem;
     padding-bottom: 0.2rem;
     padding-left: 0.5rem;
@@ -14,15 +18,19 @@
     /* border-bottom: 3px solid #171617 */
 }
 
-.DotDagerNav {
+.WolvesStudioNav {
     margin-left: 1.5rem;
 
     font-size: 2rem;
-    font-family: 'Noto Serif';
-    font-weight: 600;
+
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     /* Ajusta los valores según lo necesites */
 
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
 }
 
 .flecha {

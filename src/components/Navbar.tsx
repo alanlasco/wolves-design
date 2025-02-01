@@ -18,10 +18,9 @@ export const Navbar = () => {
 
   return (
     <NavContainer>
-      <h2 className="DotDagerNav">
-        <span className="flecha">&lt;</span> Wolves.Studio{" "}
-        <span className="flecha">&gt;</span>
-      </h2>
+      <div className="WolvesStudioNav">
+        <img className="logo" src="assets/LOGO-03.png" alt="" />
+      </div>
       <div className={`links ${clicked ? "active" : ""}`}>
         {/* Los enlaces ahora llaman a closeMenu para cerrarlo */}
         <a className="linkN" onClick={closeMenu} href="#home">
