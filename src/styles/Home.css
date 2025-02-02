@@ -152,7 +152,7 @@
 
 .card {
   position: relative;
-  z-index: 10;
+  z-index: -10;
 
   /* Ajustado el margen superior */
   left: 50%;
