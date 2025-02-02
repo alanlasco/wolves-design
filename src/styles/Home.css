@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
-
 .WolvesStudio,
 .WolvesStudioInfo,
 .WolvesStudioText {
@@ -15,12 +14,9 @@
   font-size: 1.5rem;
   text-align: center;
   white-space: nowrap;
-  /* Evita que el texto se divida en varias líneas */
   width: 0;
-  /* Inicia con ancho 0 */
   border-right: 4px solid;
   animation: typing 2s steps(10) 1s forwards, blink .5s infinite step-end alternate;
-  /* Ajusta steps según el texto */
   overflow: hidden;
   z-index: 2;
 }
@@ -32,7 +28,6 @@
 
   to {
     width: 18ch;
-    /* Ajusta a la longitud del texto, por ejemplo, 'Hola Mundo' tiene 10 caracteres */
   }
 }
 
@@ -42,25 +37,18 @@
   }
 }
 
-
-
-
 @media screen and (max-width: 769px) {
   .content {
     display: flex;
     flex-direction: column;
     text-align: center;
-
-
   }
 
   .editorImg {
-
     display: none;
     margin-left: 1rem;
     width: 50px;
     height: 50px;
-
   }
 
   .WolvesStudio {
@@ -82,8 +70,6 @@
     margin: 0 auto;
     width: 150px;
     height: 150px;
-
-
   }
 
   .magicText {
@@ -106,12 +92,22 @@
 
 @media screen and (min-width: 769px) {
   .content {
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    justify-content: space-between;
+    /* Distribuye el contenido entre texto e imagen */
+    width: 100%;
+    height: 45vh;
     text-align: left;
   }
 
   .editorImg {
-    margin-top: 2rem;
-    display: block;
+    transform: rotate(-10deg);
+    margin-left: 2rem;
+    width: 35rem;
+    height: 35rem;
+    max-width: 100%;
   }
 
   .editorImgHidden {
@@ -119,13 +115,12 @@
   }
 
   .WolvesStudio {
-
+    margin-top: 2rem;
+    color: var(--text-color);
     font-size: 3.5vw;
     font-family: 'Noto Serif';
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    /* Ajusta los valores según lo necesites */
-
   }
 
   .WolvesStudioText {
@@ -133,7 +128,6 @@
     font-family: 'Noto Serif';
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    /* Ajusta los valores según lo necesites */
     margin-bottom: 2rem;
   }
 
@@ -142,7 +136,6 @@
     font-family: 'Noto Serif';
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    /* Ajusta los valores según lo necesites */
     margin-bottom: 2em;
     color: rgb(227, 208, 248)
   }
@@ -154,78 +147,47 @@
   outline: none;
   list-style: none;
   text-decoration: none;
-  ;
   background: transparent;
-
-
 }
 
 .card {
-
-  position: absolute;
+  position: relative;
   z-index: 10;
-  margin-top: 18em;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  user-select: none;
 
+  /* Ajustado el margen superior */
+  left: 50%;
+  transform: translate(-50%, 0);
+  /* Centrado horizontal */
+  user-select: none;
   padding: 3rem;
-  -webkit-backdrop-filter: blur(10px);
+  padding-right: 4rem;
+  padding-left: 4rem;
   backdrop-filter: blur(10px);
   border-radius: 8px;
   box-shadow: 0 4px 90px rgba(0, 0, 0, 0.1);
-
   height: 70vh;
-
-  &:before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 34%, rgba(255, 255, 255, 1) 89%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0.3;
-    filter: blur(.5px);
-    mix-blend-mode: hard-light;
-  }
-
-
-  .content {
-    display: flex;
-    flex-direction: row;
-    width: 65vw;
-    height: 45vh;
-
-    z-index: 2;
-    text-shadow: -3px 0px 2px rgba(0, 0, 0, 0.1);
-  }
-}
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  /* Centrado verticalmente */
+  justify-content: space-between;
+  /* Distribuir texto e imagen */
 }
 
 p {
   line-height: 1.6;
 }
 
-
-
 .editorImg {
-  margin-left: 2rem;
-  width: 300px;
-  height: 300px;
+  transform: rotate(-10deg);
+
+  width: 38rem;
+  height: 38rem;
 }
 
 .buttonContainer {
   margin-top: 2rem;
   justify-content: center;
 }
-
 
 .boton-elegante {
   z-index: 80;
@@ -271,35 +233,4 @@ p {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  /* Espaciado entre texto e imagen */
-}
-
-
-
-
-
-
-.buttonContainer {
-  margin-top: 20px;
-}
-
-
-
-
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 18ch;
-    /* Ajusta a la longitud del texto, por ejemplo, 'Hola Mundo' tiene 10 caracteres */
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
 }

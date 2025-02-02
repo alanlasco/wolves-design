@@ -6,7 +6,7 @@
     padding-top: 0.1rem;
     padding-bottom: 0.2rem;
     padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-right: 0.3rem;
     border-radius: 15px;
     color: #171617;
 }
@@ -29,6 +29,7 @@
 }
 
 .logo {
+    margin-left: 1rem;
     width: 3rem;
     height: 3rem;
 }

@@ -2,9 +2,19 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Burger } from "./Burger.tsx";
 import "../styles/Navbar.css";
+import "../styles/styles.css";
 import { GiCrossedAxes } from "react-icons/gi";
+import { useTheme } from "./ThemeContext.tsx";
 export const Navbar = () => {
   const [clicked, setClicked] = useState<boolean>(false);
+  const ThemeToggleButton = () => {
+    const { theme, toggleTheme } = useTheme();
+    return (
+      <button onClick={toggleTheme}>
+        Cambiar a {theme === "light" ? "🌙 Modo Oscuro" : "☀️ Modo Claro"}
+      </button>
+    );
+  };
 
   // Función para alternar el estado de "clicked"
   const handleclick = () => {
@@ -35,6 +45,7 @@ export const Navbar = () => {
         <a className="linkN" onClick={closeMenu} href="#lj">
           Resumé
         </a>
+        <ThemeToggleButton />
       </div>
       <div className="burger">
         <Burger clicked={clicked} handleClick={handleclick} />
@@ -51,6 +62,7 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 99;
 
   h2 {
     color: black;

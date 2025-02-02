@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
+import "../styles/Typewriter.css";
+import { Typewriter } from "./Typewriter.tsx";
 export const Home = () => {
   return (
     <>
@@ -7,7 +9,7 @@ export const Home = () => {
         <div className="card">
           <div className="content">
             <div className="textContent">
-              <p className="magicText">Palabras magicas</p>
+              <Typewriter words={["We Innovate", "We Design", "We Build"]} />
               <h1 className="WolvesStudio">Wolves Studio</h1>
               <img src="logo.png" alt="" className="editorImgHidden" />
               <h2 className="WolvesStudioText">
@@ -23,8 +25,13 @@ export const Home = () => {
                 </a>
               </div>
             </div>
-
-            <img src="assets/graphic_editor.png" alt="" className="editorImg" />
+            <div>
+              <img
+                src="assets/graphic_editor.png"
+                alt=""
+                className="editorImg"
+              />
+            </div>
           </div>
         </div>
       </section>
