@@ -1,12 +1,19 @@
-/* styles.css */
 :root {
-    --bg-color: #ffffff;
+    --bg-color: #f6f6f6;
     --text-color: #000000;
+    --link-color: #000000;
+    --title-color: #333333;
+    --secondary-text-color: #777777;
+    /* Gris suave para texto secundario #dbdadb */
 }
 
 [data-theme="dark"] {
     --bg-color: #121212;
     --text-color: #ffffff;
+    --link-color: #ffffff;
+    --title-color: #e0e0e0;
+    --secondary-text-color: #aaaaaa;
+    /* Gris claro para texto secundario en tema oscuro */
 }
 
 /* body {

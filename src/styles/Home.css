@@ -6,6 +6,7 @@
   color: #ffffff;
 }
 
+
 .magicText {
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -124,11 +125,13 @@
   }
 
   .WolvesStudioText {
+    color: var(--secondary-text-color);
     font-size: 2rem;
     font-family: 'Noto Serif';
     font-weight: 600;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
     margin-bottom: 2rem;
+    margin-top: 1rem;
   }
 
   .WolvesStudioInfo {
@@ -137,7 +140,7 @@
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 2em;
-    color: rgb(227, 208, 248)
+    color: var(--text-color);
   }
 }
 
@@ -170,6 +173,7 @@
   align-items: center;
   /* Centrado verticalmente */
   justify-content: space-between;
+  background-color: var(--bg-color);
   /* Distribuir texto e imagen */
 }
 

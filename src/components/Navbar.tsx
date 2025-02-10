@@ -7,12 +7,80 @@ import { GiCrossedAxes } from "react-icons/gi";
 import { useTheme } from "./ThemeContext.tsx";
 export const Navbar = () => {
   const [clicked, setClicked] = useState<boolean>(false);
-  const ThemeToggleButton = () => {
-    const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
+  const [Logo, setLogo] = useState<string>("assets/LOGO-03.png");
+  const ThemeToggleButton = ({
+    theme,
+    toggleTheme,
+  }: {
+    theme: string;
+    toggleTheme: () => void;
+  }) => {
     return (
-      <button onClick={toggleTheme}>
-        Cambiar a {theme === "light" ? "🌙 Modo Oscuro" : "☀️ Modo Claro"}
-      </button>
+      <label className="switch">
+        <input
+          id="input"
+          type="checkbox"
+          onChange={toggleTheme}
+          checked={theme === "dark"}
+        />
+
+        <div className="slider round">
+          <div className="sun-moon">
+            <svg id="moon-dot-1" className="moon-dot" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="moon-dot-2" className="moon-dot" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="moon-dot-3" className="moon-dot" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="light-ray-1" className="light-ray" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="light-ray-2" className="light-ray" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="light-ray-3" className="light-ray" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+
+            <svg id="cloud-1" className="cloud-dark" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-2" className="cloud-dark" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-3" className="cloud-dark" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-4" className="cloud-light" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-5" className="cloud-light" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+            <svg id="cloud-6" className="cloud-light" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="50"></circle>
+            </svg>
+          </div>
+          <div className="stars">
+            <svg id="star-1" className="star" viewBox="0 0 20 20">
+              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
+            </svg>
+            <svg id="star-2" className="star" viewBox="0 0 20 20">
+              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
+            </svg>
+            <svg id="star-3" className="star" viewBox="0 0 20 20">
+              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
+            </svg>
+            <svg id="star-4" className="star" viewBox="0 0 20 20">
+              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
+            </svg>
+          </div>
+        </div>
+      </label>
     );
   };
 
@@ -29,7 +97,11 @@ export const Navbar = () => {
   return (
     <NavContainer>
       <div className="WolvesStudioNav">
-        <img className="logo" src="assets/LOGO-03.png" alt="" />
+        <img
+          className="logo"
+          src={theme === "light" ? "assets/LOGO-03.png" : "assets/LOGO-04.png"}
+          alt="Logo.png"
+        />
       </div>
       <div className={`links ${clicked ? "active" : ""}`}>
         {/* Los enlaces ahora llaman a closeMenu para cerrarlo */}
@@ -45,7 +117,11 @@ export const Navbar = () => {
         <a className="linkN" onClick={closeMenu} href="#lj">
           Resumé
         </a>
-        <ThemeToggleButton />
+        <div className="themeButtonContainer">
+          <span className="theme-toggle">
+            <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
+          </span>
+        </div>
       </div>
       <div className="burger">
         <Burger clicked={clicked} handleClick={handleclick} />
@@ -56,16 +132,19 @@ export const Navbar = () => {
 };
 
 const NavContainer = styled.nav`
-  border-bottom: 3px solid #dbdadb;
+  border-bottom: 3px solid var(--bg-color);
   padding: 0.3rem;
-  background: #dbdadb;
+  background: var(--bg-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 99;
+  -webkit-box-shadow: 1px 10px 23px -9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 10px 23px -9px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 10px 23px -9px rgba(0, 0, 0, 0.75);
 
   h2 {
-    color: black;
+    color: var(--title-color);
     font-weight: 400;
     z-index: 99;
 
@@ -76,7 +155,7 @@ const NavContainer = styled.nav`
   }
 
   a {
-    color: black;
+    color: var(--link-color);
     text-decoration: none;
     margin-right: 1rem;
   }
@@ -96,7 +175,7 @@ const NavContainer = styled.nav`
     margin-right: auto;
 
     a {
-      color: black;
+      color: var(--link-color);
       font-size: 1.2rem;
       margin-right: 6rem;
     }
@@ -119,7 +198,12 @@ const NavContainer = styled.nav`
       text-align: center;
       transition: opacity 0.5s ease-in-out 0.3s;
       z-index: 99;
-
+      .themeButtonContainer {
+        width: 25%;
+        display: flex;
+        margin-top: 1rem;
+        align-items: center;
+      }
       a {
         font-size: 2rem;
         display: block;
@@ -145,7 +229,7 @@ const NavContainer = styled.nav`
 `;
 
 const BgDiv = styled.div`
-  background-color: #dbdadb;
+  background-color: var(--bg-color);
   position: absolute;
   left: -1000px;
   top: -1000px;
