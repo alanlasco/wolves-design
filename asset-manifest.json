@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/wolves-design/static/css/main.908f5262.css",
+    "main.css": "/wolves-design/static/css/main.478a9c35.css",
     "main.js": "/wolves-design/static/js/main.49febc61.js",
     "index.html": "/wolves-design/index.html",
-    "main.908f5262.css.map": "/wolves-design/static/css/main.908f5262.css.map",
+    "main.478a9c35.css.map": "/wolves-design/static/css/main.478a9c35.css.map",
     "main.49febc61.js.map": "/wolves-design/static/js/main.49febc61.js.map"
   },
   "entrypoints": [
-    "static/css/main.908f5262.css",
+    "static/css/main.478a9c35.css",
     "static/js/main.49febc61.js"
   ]
 }
