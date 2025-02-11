@@ -6,7 +6,6 @@
   color: #ffffff;
 }
 
-
 .magicText {
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -153,6 +152,8 @@
   background: transparent;
 }
 
+
+
 .card {
   position: relative;
   z-index: -10;
@@ -169,10 +170,11 @@
   border-radius: 8px;
   box-shadow: 0 4px 90px rgba(0, 0, 0, 0.1);
   height: 70vh;
+  width: 70vw;
   display: flex;
   align-items: center;
   /* Centrado verticalmente */
-  justify-content: space-between;
+  justify-content: center;
   background-color: var(--bg-color);
   /* Distribuir texto e imagen */
 }
