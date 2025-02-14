@@ -12,9 +12,10 @@ export const Card = ({ titleH3, titleH2, description }: CardProps) => {
       <div className="titlesContainer">
         <h2 className="TService">{titleH3}</h2>
         <h3 className=" TServiceTwo"> {titleH2}</h3>
+
+        <br />
+        <p className="TServiceDescription">{description}</p>
       </div>
-      <br />
-      <p className="TServiceDescription">{description}</p>
       <div className="buttonContainer">
         <button className="custom-button">DETAILS</button>
       </div>
