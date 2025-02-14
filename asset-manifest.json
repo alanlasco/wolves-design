@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/wolves-design/static/css/main.e236aa09.css",
-    "main.js": "/wolves-design/static/js/main.b6c74172.js",
+    "main.css": "/wolves-design/static/css/main.c9313239.css",
+    "main.js": "/wolves-design/static/js/main.68287ca7.js",
     "index.html": "/wolves-design/index.html",
-    "main.e236aa09.css.map": "/wolves-design/static/css/main.e236aa09.css.map",
-    "main.b6c74172.js.map": "/wolves-design/static/js/main.b6c74172.js.map"
+    "main.c9313239.css.map": "/wolves-design/static/css/main.c9313239.css.map",
+    "main.68287ca7.js.map": "/wolves-design/static/js/main.68287ca7.js.map"
   },
   "entrypoints": [
-    "static/css/main.e236aa09.css",
-    "static/js/main.b6c74172.js"
+    "static/css/main.c9313239.css",
+    "static/js/main.68287ca7.js"
   ]
 }
