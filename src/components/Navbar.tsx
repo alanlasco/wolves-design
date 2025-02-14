@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Burger } from "./Burger.tsx";
-import "../styles/Navbar.css";
-import "../styles/styles.css";
-import { GiCrossedAxes } from "react-icons/gi";
-import { useTheme } from "./ThemeContext.tsx";
+import { Burger } from "./Burger.tsx"; // Asegúrate de tener este componente
+import { useTheme } from "./ThemeContext.tsx"; // Asegúrate de tener este contexto
+import "../styles/Navbar.css"; // Tus estilos adicionales
+import "../styles/styles.css"; // Tus estilos adicionales
+
 export const Navbar = () => {
   const [clicked, setClicked] = useState<boolean>(false);
   const { theme, toggleTheme } = useTheme();
-  const [Logo, setLogo] = useState<string>("assets/LOGO-03.png");
+
   const ThemeToggleButton = ({
     theme,
     toggleTheme,
@@ -24,7 +24,6 @@ export const Navbar = () => {
           onChange={toggleTheme}
           checked={theme === "dark"}
         />
-
         <div className="slider round">
           <div className="sun-moon">
             <svg id="moon-dot-1" className="moon-dot" viewBox="0 0 100 100">
@@ -179,11 +178,10 @@ const NavContainer = styled.nav`
       font-size: 1.2rem;
       margin-right: 6rem;
     }
+
     .linkN:hover {
       background-color: #171617;
       color: aliceblue;
-
-      /* border-bottom: 3px solid #171617 */
     }
 
     @media (max-width: 768px) {
@@ -198,12 +196,15 @@ const NavContainer = styled.nav`
       text-align: center;
       transition: opacity 0.5s ease-in-out 0.3s;
       z-index: 99;
+
       .themeButtonContainer {
-        width: 25%;
+        width: 80%; /* Se ajusta el tamaño del contenedor */
         display: flex;
+        justify-content: center; /* Centra el botón de alternar tema */
         margin-top: 1rem;
         align-items: center;
       }
+
       a {
         font-size: 2rem;
         display: block;

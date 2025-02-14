@@ -11,7 +11,11 @@ export const Home = () => {
             <div className="textContent">
               <Typewriter words={["We Innovate", "We Design", "We Build"]} />
               <h1 className="WolvesStudio">Wolves Studio</h1>
-              <img src="logo.png" alt="" className="editorImgHidden" />
+              <img
+                src="assets/graphic_editor.png"
+                alt=""
+                className="editorImgHidden"
+              />
               <h2 className="WolvesStudioText">
                 Digital designer & illustrator
               </h2>

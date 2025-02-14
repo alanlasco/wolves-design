@@ -1,0 +1,22 @@
+.SectionCards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+.CardsContainer {
+    width: 95%;
+    margin-top: 18vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+@media (min-width: 768px) {
+    .CardsContainer {
+        flex-direction: row;
+    }
+}

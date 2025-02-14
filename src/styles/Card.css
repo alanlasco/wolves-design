@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+.CardContainer {
+    max-width: 400px;
+}
+
+.titlesContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TService {
+    font-family: "Montserrat";
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.TServiceTwo {
+    font-family: "Montserrat";
+    margin-bottom: 2rem;
+    color: var(--secondary-text-color);
+}
+
+.TServiceDescription {
+    font-family: "Montserrat";
+    margin-bottom: 1.5rem;
+    color: var(--secondary-text-color);
+}
+
+.custom-button {
+    font-family: "Montserrat";
+    border-radius: 10px;
+    padding: .5rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgb(66, 66, 66);
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    margin-bottom: 3.5rem;
+}
+
+.custom-button:hover {
+    background-color: rgb(28, 28, 28);
+    color: white;
+}
