@@ -1,0 +1,16 @@
+.imageContainer {
+    width: 400PX;
+    /* O un ancho específico, como 80% */
+    max-width: 400px;
+    /* Opcional, limita el tamaño máximo */
+}
+
+.image {
+    width: 100%;
+    height: 300px;
+    /* O el tamaño que quieras */
+    object-fit: cover;
+    /* Mantiene la proporción y recorta si es necesario */
+    border-radius: 10px;
+    /* Opcional, redondea las esquinas */
+}
