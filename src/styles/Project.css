@@ -1,16 +1,22 @@
 .imageContainer {
-    width: 400PX;
-    /* O un ancho específico, como 80% */
+    width: 100%;
     max-width: 400px;
-    /* Opcional, limita el tamaño máximo */
+    /* Puedes ajustar esto según necesites */
 }
 
 .image {
+
     width: 100%;
-    height: 300px;
-    /* O el tamaño que quieras */
-    object-fit: cover;
-    /* Mantiene la proporción y recorta si es necesario */
-    border-radius: 10px;
-    /* Opcional, redondea las esquinas */
+    height: auto;
+    /* Esto permite que la altura se ajuste proporcionalmente */
+
+    /* Mantiene una relación de aspecto fija */
+    object-fit: contain;
+    /* Evita el recorte, ajusta la imagen dentro del contenedor */
+    border-radius: 15px;
+    transition: filter 0.3s ease-in-out;
+}
+
+.image:hover {
+    filter: grayscale(100%);
 }

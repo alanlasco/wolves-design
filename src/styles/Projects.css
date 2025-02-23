@@ -1,0 +1,28 @@
+.textProjects {
+    font-family: "Montserrat";
+    text-align: center;
+    color: var(--text-color);
+
+}
+
+.TextProjectsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem;
+}
+
+.ProjectsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+@media (min-width: 768px) {
+    .ProjectsContainer {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
