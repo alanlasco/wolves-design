@@ -1,11 +1,18 @@
 import React from "react";
 import "../styles/Project.css";
-import Presentacion from "./PRESENTACION.jpg";
-export const Project = () => {
+
+interface ProjectProps {
+  img: string;
+  text: string;
+}
+export const Project = ({ img, text }: ProjectProps) => {
   return (
     <article className="ProjectContainer">
       <div className="imageContainer">
-        <img className="image" src={Presentacion} alt="" />
+        <div className="TextContainer">
+          <p className="Text">{text}</p>
+        </div>
+        <img className="image" src={img} alt="Project" />
       </div>
     </article>
   );

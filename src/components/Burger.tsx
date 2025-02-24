@@ -103,7 +103,7 @@ const ButtonBurger = styled.div`
     z-index: 90;
     width: 50px;
     height: 5px;
-    background-color: black;
+    background-color: var(--text-color);
     display: block;
     margin: 8px auto;
     -webkit-transition: all 0.3s ease-in-out;

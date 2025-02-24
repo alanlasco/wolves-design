@@ -4,7 +4,8 @@ import { Burger } from "./Burger.tsx"; // Asegúrate de tener este componente
 import { useTheme } from "./ThemeContext.tsx"; // Asegúrate de tener este contexto
 import "../styles/Navbar.css"; // Tus estilos adicionales
 import "../styles/styles.css"; // Tus estilos adicionales
-
+import LogoLight from "../images/LOGO-03.png";
+import LogoDark from "../images/LOGO-04.png";
 export const Navbar = () => {
   const [clicked, setClicked] = useState<boolean>(false);
   const { theme, toggleTheme } = useTheme();
@@ -17,69 +18,17 @@ export const Navbar = () => {
     toggleTheme: () => void;
   }) => {
     return (
-      <label className="switch">
+      <div className="checkbox-apple">
         <input
-          id="input"
           type="checkbox"
           onChange={toggleTheme}
           checked={theme === "dark"}
+          className="yep"
+          id="check-apple"
         />
-        <div className="slider round">
-          <div className="sun-moon">
-            <svg id="moon-dot-1" className="moon-dot" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
-            <svg id="moon-dot-2" className="moon-dot" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
-            <svg id="moon-dot-3" className="moon-dot" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
-            <svg id="light-ray-1" className="light-ray" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
-            <svg id="light-ray-2" className="light-ray" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
-            <svg id="light-ray-3" className="light-ray" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
 
-            <svg id="cloud-1" className="cloud-dark" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
-            <svg id="cloud-2" className="cloud-dark" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
-            <svg id="cloud-3" className="cloud-dark" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
-            <svg id="cloud-4" className="cloud-light" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
-            <svg id="cloud-5" className="cloud-light" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
-            <svg id="cloud-6" className="cloud-light" viewBox="0 0 100 100">
-              <circle cx="50" cy="50" r="50"></circle>
-            </svg>
-          </div>
-          <div className="stars">
-            <svg id="star-1" className="star" viewBox="0 0 20 20">
-              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
-            </svg>
-            <svg id="star-2" className="star" viewBox="0 0 20 20">
-              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
-            </svg>
-            <svg id="star-3" className="star" viewBox="0 0 20 20">
-              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
-            </svg>
-            <svg id="star-4" className="star" viewBox="0 0 20 20">
-              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z"></path>
-            </svg>
-          </div>
-        </div>
-      </label>
+        <label for="check-apple"></label>
+      </div>
     );
   };
 
@@ -98,7 +47,7 @@ export const Navbar = () => {
       <div className="WolvesStudioNav">
         <img
           className="logo"
-          src={theme === "light" ? "assets/LOGO-03.png" : "assets/LOGO-04.png"}
+          src={theme === "light" ? LogoLight : LogoDark}
           alt="Logo.png"
         />
       </div>
@@ -116,6 +65,7 @@ export const Navbar = () => {
         <a className="linkN" onClick={closeMenu} href="#lj">
           Resumé
         </a>
+
         <div className="themeButtonContainer">
           <span className="theme-toggle">
             <ThemeToggleButton theme={theme} toggleTheme={toggleTheme} />
@@ -176,7 +126,7 @@ const NavContainer = styled.nav`
     a {
       color: var(--link-color);
       font-size: 1.2rem;
-      margin-right: 6rem;
+      margin-right: 3rem;
     }
 
     .linkN:hover {
