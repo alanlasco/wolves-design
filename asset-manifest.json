@@ -1,14 +1,22 @@
 {
   "files": {
-    "main.css": "/wolves-design/static/css/main.25b4b48c.css",
-    "main.js": "/wolves-design/static/js/main.a6e00f47.js",
-    "static/media/PRESENTACION.jpg": "/wolves-design/static/media/PRESENTACION.8f568e02b7879a8a923c.jpg",
+    "main.css": "/wolves-design/static/css/main.ff74b6e6.css",
+    "main.js": "/wolves-design/static/js/main.7fc32258.js",
+    "static/media/P3.jpg": "/wolves-design/static/media/P3.f3794325df645606bfd6.jpg",
+    "static/media/P6.jpg": "/wolves-design/static/media/P6.a0665c489f62ce5c0369.jpg",
+    "static/media/P4.jpg": "/wolves-design/static/media/P4.4823ebfd60a21f0eb82d.jpg",
+    "static/media/P2.jpg": "/wolves-design/static/media/P2.37001b6b6d61518726bc.jpg",
+    "static/media/P5.jpg": "/wolves-design/static/media/P5.62a6a11fb55af65b1268.jpg",
+    "static/media/P1.jpg": "/wolves-design/static/media/P1.8f568e02b7879a8a923c.jpg",
+    "static/media/graphic_editor.png": "/wolves-design/static/media/graphic_editor.9bf214cb73d292b8fe36.png",
+    "static/media/LOGO-03.png": "/wolves-design/static/media/LOGO-03.eb9821b97cfc6e95ec0d.png",
+    "static/media/LOGO-04.png": "/wolves-design/static/media/LOGO-04.aebb5ff997ae2221e433.png",
     "index.html": "/wolves-design/index.html",
-    "main.25b4b48c.css.map": "/wolves-design/static/css/main.25b4b48c.css.map",
-    "main.a6e00f47.js.map": "/wolves-design/static/js/main.a6e00f47.js.map"
+    "main.ff74b6e6.css.map": "/wolves-design/static/css/main.ff74b6e6.css.map",
+    "main.7fc32258.js.map": "/wolves-design/static/js/main.7fc32258.js.map"
   },
   "entrypoints": [
-    "static/css/main.25b4b48c.css",
-    "static/js/main.a6e00f47.js"
+    "static/css/main.ff74b6e6.css",
+    "static/js/main.7fc32258.js"
   ]
 }
